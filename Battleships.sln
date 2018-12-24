@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.168
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Battleships\Api.csproj", "{E7808340-A1EF-44B2-8083-B887B7D1CB71}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "Api\Api.csproj", "{E7808340-A1EF-44B2-8083-B887B7D1CB71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Functions", "CommandProcessor\Functions.csproj", "{FAA8CA4F-C150-4F82-825F-F57CDF01D467}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Functions", "Functions\Functions.csproj", "{FAA8CA4F-C150-4F82-825F-F57CDF01D467}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{474E3FD1-994C-4DE6-AA54-FDAE5F0F376F}"
 EndProject
