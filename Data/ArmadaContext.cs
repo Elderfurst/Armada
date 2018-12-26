@@ -5,6 +5,8 @@ namespace Data
 {
     public class ArmadaContext : DbContext
     {
+        public ArmadaContext(DbContextOptions<ArmadaContext> options) : base(options) { }
+
         public DbSet<Game> Games { get; set; }
         public DbSet<Player> Players { get; set; }
 
@@ -18,6 +20,15 @@ namespace Data
                 .Property(g => g.Width)
                 .HasDefaultValue(100)
                 .IsRequired();
+
+            modelBuilder.Entity<Player>()
+                .Property(p => p.AuthorizationCode)
+                .IsRequired();
+            modelBuilder.Entity<Player>()
+                .Property(p => p.DisplayName)
+                .IsRequired();
+
+            modelBuilder.Ignore<Action>();
         }
     }
 }
