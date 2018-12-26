@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Data.Enums;
+using System.Collections.Generic;
 
 namespace Data.Entities
 {
@@ -8,6 +9,7 @@ namespace Data.Entities
         public string Description { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
+        public GameStatus GameStatus { get; set; }
 
         public virtual List<Player> Players { get; set; }
         public virtual List<Action> Actions { get; set; }

@@ -1,4 +1,5 @@
 ﻿using Data.Entities;
+using Data.Enums;
 using Microsoft.EntityFrameworkCore;
 
 namespace Data
@@ -19,6 +20,10 @@ namespace Data
             modelBuilder.Entity<Game>()
                 .Property(g => g.Width)
                 .HasDefaultValue(100)
+                .IsRequired();
+            modelBuilder.Entity<Game>()
+                .Property(g => g.GameStatus)
+                .HasDefaultValue(GameStatus.ACTIVE)
                 .IsRequired();
 
             modelBuilder.Entity<Player>()

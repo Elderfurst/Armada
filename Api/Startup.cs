@@ -1,4 +1,6 @@
 ﻿using Data;
+using Data.Services;
+using Data.Services.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -23,6 +25,8 @@ namespace Battleships
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             
             services.AddDbContext<ArmadaContext>(options => options.UseSqlServer(Configuration.GetConnectionString("ArmadaConnectionString")));
+
+            services.AddScoped<IGameService, GameService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
